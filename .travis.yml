@@ -9,4 +9,5 @@ branches:
 before_script:
   - npm install -g @angular/cli
 script:
+- cd my-portfolio/
 - ng build --prod
