@@ -103,11 +103,9 @@ IF EXIST "%DEPLOYMENT_SOURCE%\my-portfolio\package.json" (
 :: 3. Angular Prod Build
 echo "step-3-1"
 IF EXIST "%DEPLOYMENT_SOURCE%\my-portfolio\angular.json" (
-echo "step-3-2"
-call :SelectNodeVersion
 echo Building App in %DEPLOYMENT_SOURCE%…
 pushd "%DEPLOYMENT_SOURCE%\my-portfolio"
-call :ExecuteCmd !NPM_CMD! run build --prod
+call :ExecuteCmd !NPM_CMD! run build
 :: If the above command fails comment above and uncomment below one
 :: call ./node_modules/.bin/ng build –prod
 IF !ERRORLEVEL! NEQ 0 goto error
