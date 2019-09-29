@@ -93,9 +93,9 @@ call :SelectNodeVersion
 
 :: 2. Install npm packages
 echo "%DEPLOYMENT_TARGET%"
-IF EXIST "%DEPLOYMENT_TARGET%\my-portfolio\package.json" (
+IF EXIST "%DEPLOYMENT_SOURCE%\my-portfolio\package.json" (
   echo "step 2-1"
-  pushd "%DEPLOYMENT_TARGET%"
+  pushd "%DEPLOYMENT_SOURCE%"
   call :ExecuteCmd !NPM_CMD! install --production
   IF !ERRORLEVEL! NEQ 0 goto error
   popd
