@@ -102,7 +102,7 @@ IF EXIST "%DEPLOYMENT_SOURCE%\my-portfolio\package.json" (
 
 :: 3. Angular Prod Build
 echo "step-3-1"
-IF EXIST "%DEPLOYMENT_SOURCE%\my-portfolio\.angular-cli.json" (
+IF EXIST "%DEPLOYMENT_SOURCE%\.angular-cli.json" (
 echo "step-3-2"
 echo Building App in %DEPLOYMENT_SOURCE%…
 pushd "%DEPLOYMENT_SOURCE%"
