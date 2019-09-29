@@ -103,7 +103,7 @@ IF EXIST "%DEPLOYMENT_TARGET%\my-portfolio\package.json" (
 IF EXIST "%DEPLOYMENT_SOURCE%\my-portfolio\.angular-cli.json" (
 echo Building App in %DEPLOYMENT_SOURCE%…
 pushd "%DEPLOYMENT_SOURCE%"
-call :ExecuteCmd !NPM_CMD! run build
+call :ExecuteCmd !NPM_CMD! run build --prod
 :: If the above command fails comment above and uncomment below one
 :: call ./node_modules/.bin/ng build –prod
 IF !ERRORLEVEL! NEQ 0 goto error
