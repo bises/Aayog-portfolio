@@ -98,6 +98,7 @@ IF EXIST "%DEPLOYMENT_SOURCE%\my-portfolio\package.json" (
   pushd "%DEPLOYMENT_SOURCE%"
   call :ExecuteCmd !NPM_CMD! install --production
   IF !ERRORLEVEL! NEQ 0 goto error
+  echo "step 2-2"
   popd
 )
 
