@@ -104,6 +104,7 @@ IF EXIST "%DEPLOYMENT_SOURCE%\my-portfolio\package.json" (
 echo "step-3-1"
 IF EXIST "%DEPLOYMENT_SOURCE%\my-portfolio\angular.json" (
 echo "step-3-2"
+call :SelectNodeVersion
 echo Building App in %DEPLOYMENT_SOURCE%…
 pushd "%DEPLOYMENT_SOURCE%\my-portfolio"
 call :ExecuteCmd !NPM_CMD! run build --prod
