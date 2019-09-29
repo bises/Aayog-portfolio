@@ -92,7 +92,7 @@ echo Handling node.js deployment.
 call :SelectNodeVersion
 
 :: 2. Install npm packages
-echo "step 2"
+echo "%DEPLOYMENT_TARGET%"
 IF EXIST "%DEPLOYMENT_TARGET%\my-portfolio\package.json" (
   echo "step 2-1"
   pushd "%DEPLOYMENT_TARGET%"
